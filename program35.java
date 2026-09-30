@@ -1,28 +1,20 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+class program35 {
 
-public class program35 {
+    void display() {
+
+        class Local {
+            void show() {
+                System.out.println("This is a Local Inner Class");
+            }
+        }
+
+        Local obj = new Local();
+        obj.show();
+    }
+
     public static void main(String[] args) {
 
-        LocalDate date = LocalDate.now();
-
-        DateTimeFormatter format1 =
-                DateTimeFormatter.ofPattern("dd-MM-yyyy");
-
-        DateTimeFormatter format2 =
-                DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-        DateTimeFormatter format3 =
-                DateTimeFormatter.ofPattern("dd MMMM yyyy");
-
-        DateTimeFormatter format4 =
-                DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
-
-        System.out.println("Date in different formats:");
-
-        System.out.println("1. " + date.format(format1));
-        System.out.println("2. " + date.format(format2));
-        System.out.println("3. " + date.format(format3));
-        System.out.println("4. " + date.format(format4));
+        program35 p = new program35();
+        p.display();
     }
 }
